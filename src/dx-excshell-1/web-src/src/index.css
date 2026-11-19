@@ -6,6 +6,7 @@
 html,
 body {
   margin: 0;
+  background-color: var(--spectrum-global-color-blue-400, #2680eb);
 }
 
 /** Custom Sidebar Styling **/
