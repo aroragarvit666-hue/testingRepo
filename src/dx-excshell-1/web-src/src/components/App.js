@@ -29,28 +29,30 @@ function App (props) {
     <ErrorBoundary onError={onError} FallbackComponent={fallbackComponent}>
       <Router>
         <Provider theme={defaultTheme} colorScheme={'light'}>
-          <Grid
-            areas={['sidebar content']}
-            columns={['256px', '3fr']}
-            rows={['auto']}
-            height='100vh'
-            gap='size-100'
-          >
-            <View
-              gridArea='sidebar'
-              backgroundColor='gray-200'
-              padding='size-200'
+          <View backgroundColor='blue-400' height='100vh'>
+            <Grid
+              areas={['sidebar content']}
+              columns={['256px', '3fr']}
+              rows={['auto']}
+              height='100vh'
+              gap='size-100'
             >
-              <SideBar></SideBar>
-            </View>
-            <View gridArea='content' padding='size-200'>
-              <Routes>
-                <Route path='/' element={<Home />} />
-                <Route path='/actions' element={<ActionsForm runtime={props.runtime} ims={props.ims} />}/>
-                <Route path='/about' element={<About />}/>
-              </Routes>
-            </View>
-          </Grid>
+              <View
+                gridArea='sidebar'
+                backgroundColor='gray-200'
+                padding='size-200'
+              >
+                <SideBar></SideBar>
+              </View>
+              <View gridArea='content' padding='size-200'>
+                <Routes>
+                  <Route path='/' element={<Home />} />
+                  <Route path='/actions' element={<ActionsForm runtime={props.runtime} ims={props.ims} />}/>
+                  <Route path='/about' element={<About />}/>
+                </Routes>
+              </View>
+            </Grid>
+          </View>
         </Provider>
       </Router>
     </ErrorBoundary>
