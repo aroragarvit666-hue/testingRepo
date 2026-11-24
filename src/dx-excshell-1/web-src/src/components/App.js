@@ -28,7 +28,7 @@ function App (props) {
   return (
     <ErrorBoundary onError={onError} FallbackComponent={fallbackComponent}>
       <Router>
-        <Provider theme={defaultTheme} colorScheme={'light'}>
+        <Provider theme={defaultTheme} colorScheme={'light'} UNSAFE_style={{ backgroundColor: 'var(--spectrum-global-color-green-400)' }}>
           <Grid
             areas={['sidebar content']}
             columns={['256px', '3fr']}
