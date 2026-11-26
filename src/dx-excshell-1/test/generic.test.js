@@ -1,6 +1,7 @@
 /* 
 * <license header>
 * Sample File
+* Conflicting Modification
 */
 
 jest.mock('@adobe/aio-sdk', () => ({
